@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="card-header">
+      <h1>QR Code Generator</h1>
+      <p>Convert any text or URL into a downloadable QR code</p>
+    </header>
+
+    <section class="form-section">
+      <label for="qr-input" class="input-label">Enter Text or URL</label>
+      <input 
+        type="text" 
+        id="qr-input" 
+        placeholder="e.g. https://google.com or Hello World" 
+        autocomplete="off"
+      >
+      <span id="error-message" class="error-text">Please enter some text or a valid URL!</span>
+
+      <div class="button-group">
+        <button id="generate-btn" class="btn btn-primary">Generate QR Code</button>
+        <button id="reset-btn" class="btn btn-secondary">Reset</button>
+      </div>
+    </section>
+
+    <section id="qr-result-section" class="result-section">
+      <div id="qrcode-container" class="qrcode-wrapper"></div>
+      <button id="download-btn" class="btn btn-success">Download QR Code</button>
+    </section>
+  </main>
+
+  <script src="vendor/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
